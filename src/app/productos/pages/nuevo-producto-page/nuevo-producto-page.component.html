@@ -1,0 +1,43 @@
+<div  class="container">
+  <form [formGroup]="productoForm">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required formControlName="nombre">
+    </div>
+    <div>
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion"required formControlName="descripcion"></textarea>
+    </div>
+    <div class="form-responsive">
+      <div>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required formControlName="precio">
+      </div>
+      <div class="categoria">
+        <label for="idCategoria">Categoría:</label>
+        <select id="idCategoria" name="idCategoria" required formControlName="idCategoria">
+          <option value="1">Electrónica</option>
+          <option value="2">Moda</option>
+          <option value="3">Hogar y Cocina</option>
+        </select>
+      </div>
+    </div>
+    <div class="button-container">
+      <button (click)="agregarProducto()" type="submit">{{ isEditing ? 'Editar' : 'Agregar'}} Producto</button>
+      <button (click)="tryDelete()" *ngIf="isEditing" class="delete">Eliminar Producto</button>
+    </div>
+
+  </form>
+  <div *ngIf="isDeleting" (click)="cancel()" class="dialog-overlay">
+    <div class="dialog-container" (click)="$event.stopPropagation()">
+      <h2>Confirmación</h2>
+      <p>¿Está seguro de que desea eliminar este producto?</p>
+      <div class="dialog-actions">
+        <button class="confirm-button" (click)="confirm()">Sí</button>
+        <button class="cancel-button" (click)="cancel()">No</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,33 @@
+
+.filter-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+select{
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+}
+
+.lista{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  gap: 8px;
+}
+
+card-producto{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px){
+  .lista{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

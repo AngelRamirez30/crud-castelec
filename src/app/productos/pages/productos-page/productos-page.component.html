@@ -1,0 +1,14 @@
+<form [formGroup]="formGroup" class="filter-container">
+  <span class="roboto-medium">Categorias:</span>
+  <select #category formControlName="selectedCategory" (change)="changeCategory(category.value)">
+    <option value="0">Todas</option>
+    <option value="1">Electronica</option>
+    <option value="2">Moda</option>
+    <option value="3">Hogar y Cocina</option>
+  </select>
+</form>
+<div class="lista">
+  <card-producto
+    *ngFor="let producto of productos | categoryFilter: selectedCategory" [producto]="producto"
+  ></card-producto>
+</div>

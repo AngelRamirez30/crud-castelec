@@ -1,0 +1,46 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.524);
+  width: min(100%, 200px);
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card-body {
+  margin-top: 16px;
+}
+
+.card-body p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.precio {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.categoria {
+  font-size: 0.9em;
+  color: #999;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 auto;
+}
